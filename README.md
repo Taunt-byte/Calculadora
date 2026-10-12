@@ -41,7 +41,7 @@ You only need a modern web browser to run this project.
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/Calculadora.git
+   git clone https://github.com/Taunt-byte/Calculadora.git
    ```
 
 2. Navigate to the project directory:
