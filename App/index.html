@@ -1,141 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header class="titulo">
-      <h1>Calculadora em javascript</h1>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <metas
+        name="description"
+        content="Calculadora simples desenvolvida com HTML, CSS e JavaScript."
+    >
+
+    <title>Calculadora | Lucas Neves</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Calculadora</h1>
+        <p>Uma calculadora simples feita com JavaScript</p>
     </header>
 
-    <div class="calculator">
-      <input type="text" id="result" readonly />
+    <main>
+        <section class="calculator" aria-label="Calculadora">
+            <label for="result" class="visually-hidden">
+                Visor da calculadora
+            </label>
 
-      <div>
-        <input
-          type="button"
-          class="button"
-          value="1"
-          onclick="appendValue(1)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="2"
-          onclick="appendValue(2)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="3"
-          onclick="appendValue(3)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="+"
-          onclick="appendValue('+')"
-        />
-      </div>
+            <input
+                type="text"
+                id="result"
+                class="display"
+                placeholder="0"
+                readonly
+                aria-live="polite"
+            >
 
-      <div>
-        <input
-          type="button"
-          class="button"
-          value="4"
-          onclick="appendValue(4)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="5"
-          onclick="appendValue(5)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="6"
-          onclick="appendValue(6)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="-"
-          onclick="appendValue('-')"
-        />
-      </div>
+            <div class="buttons">
+                <button type="button" class="button" data-value="7">7</button>
+                <button type="button" class="button" data-value="8">8</button>
+                <button type="button" class="button" data-value="9">9</button>
+                <button type="button" class="button operator" data-value="/">÷</button>
 
-      <div>
-        <input
-          type="button"
-          class="button"
-          value="7"
-          onclick="appendValue(7)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="8"
-          onclick="appendValue(8)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="9"
-          onclick="appendValue(9)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="*"
-          onclick="appendValue('*')"
-        />
-      </div>
+                <button type="button" class="button" data-value="4">4</button>
+                <button type="button" class="button" data-value="5">5</button>
+                <button type="button" class="button" data-value="6">6</button>
+                <button type="button" class="button operator" data-value="*">×</button>
 
-      <div>
-        <input
-          type="button"
-          class="button"
-          value="0"
-          onclick="appendValue(0)"
-        />
-        <input
-          type="button"
-          class="button"
-          value="."
-          onclick="appendValue('.')"
-        />
-        <input type="button" class="button" value="=" onclick="calculate()" />
-        <input
-          type="button"
-          class="button"
-          value="/"
-          onclick="appendValue('/')"
-        />
-      </div>
+                <button type="button" class="button" data-value="1">1</button>
+                <button type="button" class="button" data-value="2">2</button>
+                <button type="button" class="button" data-value="3">3</button>
+                <button type="button" class="button operator" data-value="-">−</button>
 
-      <div>
-        <input
-          type="button"
-          class="button"
-          value="Apagar Tudo"
-          onclick="clearAll()"
-        />
-        <input
-          type="button"
-          class="button"
-          value="Apagar Último"
-          onclick="deleteLast()"
-        />
-      </div>
-    </div>
-    <footer>
-      <p>
-        Desenvolvido por
-        <a href="https://github.com/Taunt-byte">Lucas Neves</a> em 2020
-      </p>
+                <button type="button" class="button" data-value="0">0</button>
+                <button type="button" class="button" data-value=".">.</button>
+                <button type="button" class="button equals" data-action="calculate">=</button>
+                <button type="button" class="button operator" data-value="+">+</button>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="button clear" data-action="clear">
+                    Limpar tudo
+                </button>
+
+                <button type="button" class="button delete" data-action="delete">
+                    Apagar último
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            Desenvolvido por
+            <a
+                href="https://github.com/Taunt-byte"
+                target="_blank"
+                rel="noopener noreferrer"
+            >Lucas Neves</a>
+        </p>
     </footer>
-    <script src="js/index.js"></script>
-  </body>
+</body>
 </html>
